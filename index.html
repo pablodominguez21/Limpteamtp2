@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
     <title>Document</title>
 </head>
 <body>
@@ -16,28 +21,78 @@
     </div>
 
     <div id="login">
-        <div id="boton" class="container col-md-12 row justify-content-end">
-            <a href="formularioregistro.html"><button>Registrate</button></a>
+        <div id="boton " class="container col-md-12 row justify-content-end">
+            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#Registro"  href="formularioregistro.html">Registrate</a>
         </div>
+        
+        
         <div id="boton" class="container col-md-12 row justify-content-end">    
-            <a href="formularioingreso.html"><button>Iniciar Sesion</button></a>
+            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#InicioSesion" href="formularioingreso.html">Iniciar Sesion</a>
         </div>
     </div>
 </header>
 
 <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a id="boton1" class="nav-link active" href="#">Active</a>
+          <a id="boton1" class="nav-link active" onclick="precionarBoton(1)" href="#">Inicio</a>
         </li>
         <li class="nav-item">
-          <a id="boton2" class="nav-link" href="#">Much longer nav link</a>
+          <a id="boton2" class="nav-link" onclick="precionarBoton(2)" href="productos.html">Productos</a>
         </li>
         <li class="nav-item">
-          <a id="boton3" class="nav-link" href="#">Link</a>
+          <a id="boton3" class="nav-link" onclick="precionarBoton(3)"" href="promos.html">Promos</a>
         </li>
       </ul>
 
+      <h2>Inicio</h2>
 
+    
+
+ 
+  <!-- Modal Sesion -->
+  <div class="modal fade" id="InicioSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <form class="form-reg" action="">
+                <input class="input" type="text" placeholder="&#128100;Usuario" required autofocus>
+                <input class="input" type="password" placeholder="&#8962;Contraseña" required >
+                <div class="btn-form">
+                  <input class="class=btn btn-primary" type="submit" value="INGRESAR">
+                </div>
+            </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <!-- Modal Registro -->
+    <div class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+
+                <form class="form-reg" action="">
+                    <input class="input" type="text" placeholder="&#128100;Nombre" required autofocus>
+                    <input class="input" type="text" placeholder="&#128100;Apellidos" required autofocus>
+                    <input class="input" type="email" placeholder="&#9993;Correo Electronico" required >
+                    <input class="input" type="text" placeholder="&#128222;Telefono" required >
+                    <input class="input" type="password" placeholder="&#8962;Contraseña" required >
+                    <div class="btn-form">
+                     <input class="btn-submit" type="submit" value="REGISTRAR">
+                    </div>
+                   </form>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+
+
+      
 <script src="script.js"></script>
 </body>
 </html>

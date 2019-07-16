@@ -1,10 +1,15 @@
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
 
+function precionarBoton(indice){
+    document.getElementById("boton1").className = "nav-link";
+    document.getElementById("boton2").className = "nav-link";
+    document.getElementById("boton3").className = "nav-link";
 
-window.onclick = function(){
-    
-    var boton1 = document.getElementById('boton1').className='nav-link';
-    var boton2 =  document.getElementById('boton2').className='nav-link active';
+    document.getElementById("boton"+indice).className = "nav-link active";
 }
+
 
 
 
