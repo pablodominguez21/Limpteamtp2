@@ -15,10 +15,12 @@
 </head>
 <body>
 <header>
+  <form action="Post">
     <div id="buscadorArticulos" class=" container col-md-12 row justify-content-end" >
         <input type="text" placeholder="Busca tus articulos">
-        <button type="submit" id="botonBuscar">Buscar</button>
+        <button type="submit" id="botonBuscar"  class="btn btn-secondary">Buscar</button>
     </div>
+  </form>
 
     <div id="login">
         <div id="boton " class="container col-md-12 row justify-content-end">
@@ -71,18 +73,42 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-
                 <form class="form-reg" action="">
-                    <input class="input" type="text" placeholder="&#128100;Nombre" required autofocus>
-                    <input class="input" type="text" placeholder="&#128100;Apellidos" required autofocus>
-                    <input class="input" type="email" placeholder="&#9993;Correo Electronico" required >
-                    <input class="input" type="text" placeholder="&#128222;Telefono" required >
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                      </div>
+                    <!-- <input class="input" type="text" placeholder="&#128100;Nombre" required autofocus> -->
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Apellido</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                      </div>
+                    <!-- <input class="input" type="text" placeholder="&#128100;Apellidos" required autofocus> -->
+
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="addon-wrapping">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" required aria-label="Username" aria-describedby="addon-wrapping">
+                      </div>
+                    <!-- <input class="input" type="email" placeholder="&#9993;Correo Electronico"> -->
+
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Telefono</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                      </div>
+                    <!-- <input class="input" type="text" placeholder="&#128222;Telefono" required > -->
                     <input class="input" type="password" placeholder="&#8962;Contraseña" required >
                     <div class="btn-form">
                      <input class="btn-submit" type="submit" value="REGISTRAR">
                     </div>
                    </form>
-
           </div>
         </div>
       </div>
