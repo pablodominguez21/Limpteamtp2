@@ -7,6 +7,9 @@ header{
     margin: 0 auto;
     height: 500px;
 }
+#nav{
+    background-color: ghostwhite;
+}
 
 #buscadorArticulos{
     margin-top: 15px;
