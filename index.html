@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="estilos.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -21,23 +22,23 @@
 </head>
 
 <body>
-  <header>
+  <header data-aos="zoom-in" data-aos-delay="20">
     <form action="Post">
-      <div id="buscadorArticulos" class=" container col-md-12 row justify-content-end">
+      <div data-aos="fade-left" data-aos-delay="400" id="buscadorArticulos" class=" container col-md-12 row justify-content-end">
         <input type="text" placeholder="Busca tus articulos">
-        <button type="submit" id="botonBuscar" class="btn btn-secondary">Buscar</button>
+        <button type="submit" id="botonBuscar" class="nav-link active btn btn-primary">Buscar</button>
       </div>
     
 
     <!-- Loguearse -->
     <div id="login">
-      <div id="boton" class="container col-md-12 row justify-content-end">
+      <div data-aos="fade-left" data-aos-delay="500" id="boton" class="container col-md-12 row justify-content-end">
         <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#Registro"
           href="formularioregistro.html">Registrate</a>
     </div>
 
     <!-- Registrarse -->
-      <div id="boton" class="container col-md-12 row justify-content-end">
+      <div data-aos="fade-left" data-aos-delay="600" id="boton" class="container col-md-12 row justify-content-end">
         <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#InicioSesion"
           href="formularioingreso.html">Iniciar Sesion</a>
       </div>
@@ -45,7 +46,7 @@
   </form>
   </header>
 
-  <div class="container col-md-6" id="nav">
+  <div class="container col-md-6" id="nav" data-aos="fade-down" data-aos-delay="400">
     <ul class="nav nav-pills nav-fill">
       <li class="nav-item">
         <a id="boton1" class="nav-link active btn btn-primary" onclick="precionarBoton(1)" href="#">Inicio</a>
@@ -95,7 +96,7 @@
   </div>
 
   <!-- Modal Registro -->
-  <div class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div id="productos" class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -154,12 +155,14 @@
     </div>
   </div>
 
+</div>
 
 
 
 
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+
 </body>
 
 </html>
